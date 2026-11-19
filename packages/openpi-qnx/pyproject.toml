@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openpi-qnx"
+version = "0.1.0"
+description = "openpi pi0 policy server for QNX: ONNX Runtime inference behind openpi's websocket protocol"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+dependencies = ["numpy", "onnxruntime", "sentencepiece", "pillow", "openpi-client", "websockets>=13"]
+
+[project.scripts]
+openpi-qnx-serve = "openpi_qnx.serve:main"
+
+[tool.setuptools]
+packages = ["openpi_qnx"]
